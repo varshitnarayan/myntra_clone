@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="product.css">
+</head>
+<body class="product-page">
+
+  <!-- Navbar -->
+  <nav>
+  <div class="logo">
+    <a href="mhome.html"><img src="images/mlogo.png" alt="logo"></a>
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Search for products, brands and more">
+  </div>
+  <div class="icons">
+    <span>Profile</span>
+    <span>Wishlist</span>
+    <span>Bag</span>
+  </div>
+</nav>
+
+  <!-- Product Details Container -->
+  <div class="product-details">
+    <img id="productImage" src="" alt="Product Image">
+    <div class="info">
+      <h2 id="productName">Product Name</h2>
+      <p id="productPrice">₹0</p>
+      <p id="productDescription">This is a detailed description of the product.</p>
+      <button id="addToCartBtn">Add to Bag</button>
+    </div>
+  </div>
+
+  <script>
+    // Get product name from URL
+    const params = new URLSearchParams(window.location.search);
+    const productName = params.get("name");
+
+    // Example product data (later you can move this to your common JS)
+    const products = {
+      "Men's T-Shirt": { price: "₹599", img: "images/men_tshirt.jpeg", desc: "Comfortable cotton t-shirt for daily wear." },
+      "Women's Dress": { price: "₹999", img: "images/product1.jpeg", desc: "Stylish dress perfect for parties." },
+      "Sneakers": { price: "₹1,499", img: "images/sneaker.jpeg", desc: "Trendy sneakers for casual outings." },
+      "Kids Dress": { price: "₹499", img: "images/kidsdress.jpeg", desc: "Cute and comfy dress for kids." },
+      "Women's Skirt": { price: "₹1,199", img: "images/women_skirt.jpeg", desc: "Elegant skirt for everyday style." },
+      "Men's Shirt": { price: "₹899", img: "images/men_shirt.jpeg", desc: "Classic shirt suitable for office and casual wear." },
+      "Men's Jacket": { price: "₹2,499", img: "images/men_jacket.jpeg", desc: "Warm jacket for winter fashion." },
+      "Women's Top": { price: "₹799", img: "images/women_top.jpeg", desc: "Trendy top for casual looks." },
+      "Lipstick": { price: "₹499", img: "images/beauty_lipstick.jpg", desc: "Matte finish lipstick with long-lasting color." }
+    };
+
+    if (productName && products[productName]) {
+      const product = products[productName];
+      document.getElementById("productName").textContent = productName;
+      document.getElementById("productPrice").textContent = product.price;
+      document.getElementById("productImage").src = product.img;
+      document.getElementById("productDescription").textContent = product.desc;
+    }
+
+    // Add to cart
+    document.getElementById("addToCartBtn").addEventListener("click", () => {
+      alert(productName + " added to your Bag!");
+      // Later: Save to localStorage for cart
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
