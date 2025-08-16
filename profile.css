@@ -1,0 +1,137 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Header - same as home */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo a {
+    display: inline-block;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Profile Container */
+#profileContainer {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+#profileContainer h2 {
+    color: #ff3f6c;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#profileContainer p {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* Buttons */
+#profileContainer button {
+    background-color: #ff3f6c;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 5px 0 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#profileContainer button:hover {
+    background-color: #e0335e;
+}
+
+/* Form styling */
+#profileForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#profileForm input,
+#profileForm textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#profileForm textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#profileForm button {
+    background-color: #ff3f6c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#profileForm button:hover {
+    background-color: #e0335e;
+}
+
+/* Footer - same as home */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+    z-index: 1000;
+}
